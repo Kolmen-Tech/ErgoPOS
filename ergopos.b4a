@@ -1,0 +1,558 @@
+﻿Build1=Default,com.kolmentech.ergopos
+File1=001.png
+File10=address128.png
+File11=back_96px.png
+File12=barcode128.png
+File13=blackbg.jpg
+File14=category128.png
+File15=cloud96.png
+File16=code.png
+File17=code128.png
+File18=contactperson128.png
+File19=customer128.png
+File2=002.png
+File20=documents_folder_90px.png
+File21=email128.png
+File22=ergo-erg-logo.png
+File23=ergopos512b.png
+File24=general_ledger_96px.png
+File25=kledb.db
+File26=loginid128.png
+File27=lyCustomerDetail.bal
+File28=lyCustomerDetail2.bal
+File29=lyCustomerHistory.bal
+File3=003.png
+File30=lyCustomerList.bal
+File31=lyCustomerListDetail.bal
+File32=lyLogin.bal
+File33=lyMain.bal
+File34=lyMenuItem.bal
+File35=lyMyCompany.bal
+File36=lyProduct.bal
+File37=lyProductCategory.bal
+File38=lyProductCategoryDetail.bal
+File39=lyProductCategoryListDetail.bal
+File4=004.png
+File40=lyProductDetail.bal
+File41=lyProductListDetail.bal
+File42=mobilephone128.png
+File43=password128.png
+File44=price128a.png
+File45=price128b.png
+File46=price128c.png
+File47=printer.png
+File48=product128.png
+File49=productcategory.png
+File5=005.png
+File50=remark128.png
+File51=tax128.png
+File52=telephone128.png
+File6=006.png
+File7=007.png
+File8=008.png
+File9=011.png
+FileGroup1=Default Group\ImagesMainMenu
+FileGroup10=Default Group
+FileGroup11=Default Group\Images
+FileGroup12=Default Group\ImageProduct
+FileGroup13=Default Group\Images
+FileGroup14=Default Group
+FileGroup15=Default Group\ImagesMainMenu
+FileGroup16=Default Group
+FileGroup17=Default Group\ImageProduct
+FileGroup18=Default Group
+FileGroup19=Default Group
+FileGroup2=Default Group\ImagesMainMenu
+FileGroup20=Default Group
+FileGroup21=Default Group
+FileGroup22=Default Group\Images
+FileGroup23=Default Group\Images
+FileGroup24=Default Group\ImageProduct
+FileGroup25=Default Group
+FileGroup26=Default Group\Images
+FileGroup27=Default Group
+FileGroup28=Default Group
+FileGroup29=Default Group
+FileGroup3=Default Group\ImagesMainMenu
+FileGroup30=Default Group
+FileGroup31=Default Group
+FileGroup32=Default Group
+FileGroup33=Default Group
+FileGroup34=Default Group
+FileGroup35=Default Group
+FileGroup36=Default Group
+FileGroup37=Default Group
+FileGroup38=Default Group
+FileGroup39=Default Group
+FileGroup4=Default Group\ImagesMainMenu
+FileGroup40=Default Group
+FileGroup41=Default Group
+FileGroup42=Default Group
+FileGroup43=Default Group\Images
+FileGroup44=Default Group\ImageProduct
+FileGroup45=Default Group\ImageProduct
+FileGroup46=Default Group\ImageProduct
+FileGroup47=Default Group\ImagesMainMenu
+FileGroup48=Default Group\ImageProduct
+FileGroup49=Default Group\ImagesMainMenu
+FileGroup5=Default Group\ImagesMainMenu
+FileGroup50=Default Group\ImageProduct
+FileGroup51=Default Group\ImageProduct
+FileGroup52=Default Group
+FileGroup6=Default Group\ImagesMainMenu
+FileGroup7=Default Group\ImagesMainMenu
+FileGroup8=Default Group\ImagesMainMenu
+FileGroup9=Default Group\ImagesMainMenu
+Group=Default Group
+Library1=appupdating
+Library10=phone
+Library11=randomaccessfile
+Library12=reflection
+Library13=runtimepermissions
+Library14=sql
+Library15=stringfunctions2
+Library16=stringutils
+Library17=tabstripviewpager
+Library18=xui
+Library19=xui views
+Library2=astabmenu
+Library20=xnobjects
+Library3=core
+Library4=fileprovider
+Library5=http
+Library6=javaobject
+Library7=json
+Library8=keyvaluestore2
+Library9=okhttputils2
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=CustomerDetail
+Module10=ProductCategoryDetail
+Module11=ProductDetail
+Module12=Starter
+Module2=CustomerHistory
+Module3=CustomerList
+Module4=DBUtils
+Module5=Login
+Module6=moPublic
+Module7=MyCompany
+Module8=Product
+Module9=ProductCategory
+NumberOfFiles=52
+NumberOfLibraries=20
+NumberOfModules=12
+Version=11
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: ErgoPOS
+	#VersionCode: 1
+	#VersionName: 1.0.0.0
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+	Private rp As RuntimePermissions
+	Private shared As String
+	Dim SQL1 As SQL
+	Dim Timer1 As Timer
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private kvs As KeyValueStore
+	Dim cursorOptionSetting As Cursor
+	
+	Dim Bitmap1 As Bitmap
+	Dim Bitmap2 As Bitmap
+	Dim Bitmap3 As Bitmap
+	Dim Bitmap4 As Bitmap
+	Dim Bitmap5 As Bitmap
+	Dim Bitmap6 As Bitmap
+	Dim Bitmap7 As Bitmap
+	Dim Bitmap8 As Bitmap
+	Dim Bitmap9 As Bitmap
+	Dim Bitmap10 As Bitmap
+	Dim Bitmap11 As Bitmap
+	
+	Private clv1 As CustomListView
+	Private imgMenuLogo As ImageView
+	Private lblLine1 As Label
+	Private lblLine2 As Label
+	
+	
+	
+	Private PanelSplash As Panel
+End Sub
+
+Sub Timer1_tick
+	Timer1.Enabled = False
+	PanelSplash.Visible=False
+	
+	If kvs.Get("REMUSERID") = "" Or kvs.Get("REMUSERID") = "FALSE" Then
+		StartActivity("Login")
+	End If
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("lyMain")
+	shared = rp.GetSafeDirDefaultExternal("")
+	kvs.Initialize(shared, "Userdatastore")
+	
+	'KVS Init
+	If kvs.ContainsKey("REMUSERID") = False Then
+		kvs.Put ("REMUSERID","FALSE")
+	End If
+	If kvs.ContainsKey("CloseMe") = False Then
+		kvs.Put ("CloseMe","NO")
+	End If
+	kvs.Put("strCurrencySymbol","RM")
+	
+	'Database
+	If File.Exists(shared ,"kledb.db") = False Then
+		File.Copy(File.DirAssets,"kledb.db",shared,"kledb.db")
+	End If
+	
+	If SQL1.IsInitialized = False Then
+		SQL1.Initialize(shared, "kledb.db", False)
+	End If
+	
+	Timer1.Initialize("Timer1", 2000)
+	Timer1.Enabled=True
+	
+	If FirstTime = True Then
+		'Update Database
+		CheckDBAndUpdate
+	
+		'Get Init Setting
+		GetSystemOptionSetting
+						
+	End If
+	
+	Bitmap1.Initialize(File.DirAssets,"001.png")
+	Bitmap2.Initialize(File.DirAssets,"002.png")
+	Bitmap3.Initialize(File.DirAssets,"003.png")
+	Bitmap4.Initialize(File.DirAssets,"004.png")
+	Bitmap5.Initialize(File.DirAssets,"005.png")
+	Bitmap6.Initialize(File.DirAssets,"006.png")
+	Bitmap7.Initialize(File.DirAssets,"008.png")
+	Bitmap8.Initialize(File.DirAssets,"cloud96.png")
+	Bitmap9.Initialize(File.DirAssets,"printer.png")
+	Bitmap10.Initialize(File.DirAssets,"productcategory.png")
+	Bitmap11.Initialize(File.DirAssets,"011.png")
+		
+	
+		
+End Sub
+
+Sub Activity_Resume
+	If kvs.Get("CloseMe") = "YES" Then
+		kvs.Put("CloseMe","NO")
+		Activity.Finish
+	End If
+	
+	RefreshMenu
+	
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub RefreshMenu
+	
+	clv1.Clear
+	clv1.Add(CreateListItemV2(1,"New Invoice","Click Here To Create a New Invoice",clv1.AsView.Width, 80dip), 1)
+	clv1.Add(CreateListItemV2(2,"Invoice Document","View, Edit & Delete Invoice",clv1.AsView.Width, 80dip), 2)
+	clv1.Add(CreateListItemV2(3,"Customers","Manage Your Dear Customer Here",clv1.AsView.Width, 80dip), 3)
+	clv1.Add(CreateListItemV2(10,"Product Category","Manage Your Product Category Here",clv1.AsView.Width, 80dip), 10)
+	clv1.Add(CreateListItemV2(4,"Products","Manage Your Products Here",clv1.AsView.Width, 80dip) ,4)
+	clv1.Add(CreateListItemV2(5,"Setting","Change System Option Setting",clv1.AsView.Width, 80dip) ,5)
+	clv1.Add(CreateListItemV2(6,"My Company","Update My Company Info Here",clv1.AsView.Width, 80dip), 6)
+	clv1.Add(CreateListItemV2(7,"Reports","Daily Report, Export Report",clv1.AsView.Width, 80dip) ,7)
+	clv1.Add(CreateListItemV2(11,"Logout","Logout from system",clv1.AsView.Width, 100dip) ,11)
+End Sub
+
+Sub clv1_ItemClick (Index As Int, Value As Object)
+
+	Dim strValue As String
+	strValue = Value
+	
+	Select strValue
+		Case "1" 'New Invoice
+			StartActivity("SelectCustomer")
+		Case "2" 'Invoice List
+			StartActivity("DocList")
+		Case "3" 'Customer'
+			StartActivity("CustomerList")
+		Case "4" 'Products'
+			StartActivity("Product")
+		Case "5" 'Setting'
+			If kvs.Get("CURRUSERADMIN") = "YES" Then
+				StartActivity("SystemSetting2")
+			Else
+				MsgboxAsync("Invalid Authorize","Error")
+			End If
+			
+		Case "6" 'My Company'
+			If kvs.Get("CURRUSERADMIN") = "YES" Then
+				StartActivity("MyCompany")
+			Else
+				MsgboxAsync("Invalid Authorize","Error")
+			End If
+						
+		Case "7" 'Reports
+			StartActivity("MenuReport")
+		Case "8" 'Cloud
+			StartActivity("BackupDB")
+		Case 9
+			StartActivity("BuyPrinter")
+		Case 10
+			StartActivity("ProductCategory")
+		Case 11
+			kvs.Put("REMUSERID", "")
+			StartActivity("Login")
+			
+	End Select
+End Sub
+
+
+Sub Activity_KeyPress (KeyCode As Int) As Boolean
+
+	If KeyCode = KeyCodes.KEYCODE_BACK Then
+  
+		Select Msgbox2("Do you want exit app?","WARNING","Yes","","No",Null)
+			Case DialogResponse.POSITIVE
+				Activity.Finish
+			Case Else
+				Return True
+		End Select
+	End If
+  
+End Sub
+
+
+Sub CreateListItemV2(intIcon As Int, Line1 As String, Line2 As String, Width As Int, Height As Int) As Panel
+	Dim p As Panel
+	p.Initialize("")
+	p.SetLayout(0, 0, Width, Height)
+	p.LoadLayout("lyMenuItem")
+	
+	Select intIcon
+		Case 1
+			imgMenuLogo.Bitmap = Bitmap1
+		Case 2
+			imgMenuLogo.Bitmap = Bitmap2
+		Case 3
+			imgMenuLogo.Bitmap = Bitmap3
+		Case 4
+			imgMenuLogo.Bitmap = Bitmap4
+		Case 5
+			imgMenuLogo.Bitmap = Bitmap5
+		Case 6
+			imgMenuLogo.Bitmap = Bitmap6
+		Case 7
+			imgMenuLogo.Bitmap = Bitmap7
+		Case 8
+			imgMenuLogo.Bitmap = Bitmap8
+		Case 9
+			imgMenuLogo.Bitmap = Bitmap9
+		Case 10
+			imgMenuLogo.Bitmap = Bitmap10
+		Case 11
+			imgMenuLogo.Bitmap = Bitmap11
+	End Select
+	
+	lblLine1.Text = Line1
+	lblLine2.Text = Line2
+	
+	Return p
+	
+
+	
+End Sub
+
+
+Sub GetSystemOptionSetting
+	cursorOptionSetting = SQL1.ExecQuery("SELECT * FROM OPTIONSETTING WHERE ID = 1" )
+	If cursorOptionSetting.RowCount > 0 Then
+		cursorOptionSetting.Position = 0
+		kvs.Put("GSTCode", cursorOptionSetting.GetString ("GSTCode"))
+		kvs.Put("IncGST", cursorOptionSetting.GetString ("IncGST"))
+		kvs.Put("InitialInvoiceNo", cursorOptionSetting.GetString ("InitialInvoiceNo"))
+		kvs.Put("StartFrom", cursorOptionSetting.GetString ("StartFrom"))
+		kvs.Put("PrintAddress", cursorOptionSetting.GetString ("PrintAddress"))
+		kvs.Put("PaperSize", cursorOptionSetting.GetString ("PaperSize"))
+		kvs.Put("CurrencySimbol", cursorOptionSetting.GetString ("Currency"))
+		kvs.Put("GSTRate", cursorOptionSetting.GetString("GSTPercent"))
+		kvs.Put("InvoiceTitle", cursorOptionSetting.GetString("InvoiceTitle"))
+		kvs.Put("SYSGSTCode", cursorOptionSetting.GetString("SYSGSTCode"))
+		kvs.Put("BTMode",cursorOptionSetting.GetString("BTMode"))
+		kvs.Put("PrintGST",cursorOptionSetting.GetString("PrintGST"))
+		Log("PaperSize : " & kvs.get("PaperSize"))
+		
+	End If
+	
+	
+End Sub
+
+
+Sub CheckDBAndUpdate()
+	
+	
+	Dim txt As String
+	If SQL1.ExecQuerySingleResult("SELECT count(name) FROM sqlite_master WHERE type='table' AND name ='ProductCategory'") = 0 Then
+		'Create Table
+		SQL1.ExecNonQuery("CREATE TABLE ProductCategory (ID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE , Category TEXT, Status INTEGER DEFAULT 1)")
+		SQL1.ExecNonQuery2("INSERT INTO ProductCategory VALUES(?,?,?)", Array As Object("1","Default","1"))
+		SQL1.ExecNonQuery2("INSERT INTO ProductCategory VALUES(?,?,?)", Array As Object("2","Other","1"))
+		
+		
+	End If
+	
+	If SQL1.ExecQuerySingleResult("SELECT count(name) FROM sqlite_master WHERE type='table' AND name ='PaymentMethod'") = 0 Then
+		'Create Table
+		SQL1.ExecNonQuery("CREATE TABLE PaymentMethod (ID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE , PaymentMethodName TEXT, Status INTEGER DEFAULT 1)")
+		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("1","CASH","1"))
+		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("2","VISA","1"))
+		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("3","MASTER","1"))
+		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("4","CHEQUE","1"))
+		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("5","EWALLET","1"))
+		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("6","OTHER","1"))
+		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("7","ONLINE","1"))
+	End If
+	
+	If SQL1.ExecQuerySingleResult("SELECT count(name) FROM sqlite_master WHERE type='table' AND name ='Location'") = 0 Then
+		'Create Table
+		SQL1.ExecNonQuery("CREATE TABLE Location (ID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE , LocationName TEXT, Status INTEGER DEFAULT 1)")
+		SQL1.ExecNonQuery2("INSERT INTO Location VALUES(?,?,?)", Array As Object("1","SB","1"))
+		SQL1.ExecNonQuery2("INSERT INTO Location VALUES(?,?,?)", Array As Object("2","KL","1"))
+		SQL1.ExecNonQuery2("INSERT INTO Location VALUES(?,?,?)", Array As Object("3","PJ","1"))
+		SQL1.ExecNonQuery2("INSERT INTO Location VALUES(?,?,?)", Array As Object("4","OTHER","1"))
+	End If
+	
+	If DBUtils.FieldExists(SQL1,"Customer","Location") = True Then
+		Log("Profit Field EXISTS!")
+	Else
+		Log("Profit DO NOT exists.")
+		txt="ALTER TABLE Customer ADD COLUMN Location TEXT"
+		SQL1.ExecNonQuery(txt)
+		SQL1.ExecNonQuery ("UPDATE Customer SET Location = 'Other'")
+	End If
+	
+'	Dim txt As String
+'	If SQL1.ExecQuerySingleResult("SELECT count(name) FROM sqlite_master WHERE type='table' AND name ='ProductCategory'") = 0 Then
+'		'Create Table
+'		SQL1.ExecNonQuery("CREATE TABLE ProductCategory (ID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE , Category TEXT, Status INTEGER DEFAULT 1)")
+'		SQL1.ExecNonQuery2("INSERT INTO ProductCategory VALUES(?,?,?)", Array As Object("1","Default","1"))
+'		SQL1.ExecNonQuery2("INSERT INTO ProductCategory VALUES(?,?,?)", Array As Object("2","Other","1"))
+'		
+'		
+'	End If
+'	
+'	If SQL1.ExecQuerySingleResult("SELECT count(name) FROM sqlite_master WHERE type='table' AND name ='PaymentMethod'") = 0 Then
+'		'Create Table
+'		SQL1.ExecNonQuery("CREATE TABLE PaymentMethod (ID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE , PaymentMethodName TEXT, Status INTEGER DEFAULT 1)")
+'		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("1","CASH","1"))
+'		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("2","VISA","1"))
+'		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("3","MASTER","1"))
+'		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("4","CHEQUE","1"))
+'		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("5","EWALLET","1"))
+'		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("6","OTHER","1"))
+'		SQL1.ExecNonQuery2("INSERT INTO PaymentMethod VALUES(?,?,?)", Array As Object("7","ONLINE","1"))
+'	End If
+'	
+'	If SQL1.ExecQuerySingleResult("SELECT count(name) FROM sqlite_master WHERE type='table' AND name ='Location'") = 0 Then
+'		'Create Table
+'		SQL1.ExecNonQuery("CREATE TABLE Location (ID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE , LocationName TEXT, Status INTEGER DEFAULT 1)")
+'		SQL1.ExecNonQuery2("INSERT INTO Location VALUES(?,?,?)", Array As Object("1","SB","1"))
+'		SQL1.ExecNonQuery2("INSERT INTO Location VALUES(?,?,?)", Array As Object("2","KL","1"))
+'		SQL1.ExecNonQuery2("INSERT INTO Location VALUES(?,?,?)", Array As Object("3","PJ","1"))
+'		SQL1.ExecNonQuery2("INSERT INTO Location VALUES(?,?,?)", Array As Object("4","OTHER","1"))
+'	End If
+'		
+'	If DBUtils.FieldExists(SQL1,"ProductCategory","Status") = True Then
+'		Log("Status Field EXISTS!")
+'	Else
+'		Log("Field DO NOT exists.")
+'		txt="ALTER TABLE ProductCategory ADD COLUMN Status INTEGER"
+'		SQL1.ExecNonQuery(txt)
+'		SQL1.ExecNonQuery ("UPDATE ProductCategory SET Status = 1")
+'	End If
+'	
+'	If DBUtils.FieldExists(SQL1,"OPTIONSETTING","PDateFormat") = True Then
+'		Log("PDateFormat Field EXISTS!")
+'	Else
+'		Log("PDateFormat DO NOT exists.")
+'		txt="ALTER TABLE OPTIONSETTING ADD COLUMN PDateFormat TEXT"
+'		SQL1.ExecNonQuery(txt)
+'		SQL1.ExecNonQuery ("UPDATE OPTIONSETTING SET PDateFormat = 'dd/MM/yyyy'")
+'	End If
+'	
+'	If DBUtils.FieldExists(SQL1,"ITEMS","Category") = True Then
+'		Log("Category Field EXISTS!")
+'	Else
+'		Log("Category DO NOT exists.")
+'		txt="ALTER TABLE ITEMS ADD COLUMN Category TEXT"
+'		SQL1.ExecNonQuery(txt)
+'		SQL1.ExecNonQuery ("UPDATE ITEMS SET Category = 'Default'")
+'	End If
+'	
+'	If DBUtils.FieldExists(SQL1,"ITEMS","Cost") = True Then
+'		Log("Cost Field EXISTS!")
+'	Else
+'		Log("Cost DO NOT exists.")
+'		txt="ALTER TABLE ITEMS ADD COLUMN Cost Numeric"
+'		SQL1.ExecNonQuery(txt)
+'		SQL1.ExecNonQuery ("UPDATE ITEMS SET Cost = 0")
+'	End If
+'	
+'	If DBUtils.FieldExists(SQL1,"TTDetail","UnitCost") = True Then
+'		Log("UnitCost Field EXISTS!")
+'	Else
+'		Log("UnitCost DO NOT exists.")
+'		txt="ALTER TABLE TTDetail ADD COLUMN UnitCost Numeric"
+'		SQL1.ExecNonQuery(txt)
+'		SQL1.ExecNonQuery ("UPDATE TTDetail SET UnitCost = 0")
+'	End If
+'	
+'	If DBUtils.FieldExists(SQL1,"TTDetail","Profit") = True Then
+'		Log("Profit Field EXISTS!")
+'	Else
+'		Log("Profit DO NOT exists.")
+'		txt="ALTER TABLE TTDetail ADD COLUMN Profit Numeric"
+'		SQL1.ExecNonQuery(txt)
+'		SQL1.ExecNonQuery ("UPDATE TTDetail SET Profit = 0")
+'	End If
+'	
+'	If DBUtils.FieldExists(SQL1,"TTMaster","PaymentMethod") = True Then
+'		Log("Profit Field EXISTS!")
+'	Else
+'		Log("Profit DO NOT exists.")
+'		txt="ALTER TABLE TTMaster ADD COLUMN PaymentMethod TEXT"
+'		SQL1.ExecNonQuery(txt)
+'		SQL1.ExecNonQuery ("UPDATE TTMaster SET PaymentMethod = 'CASH'")
+'	End If
+'	
+'	
+'	If DBUtils.FieldExists(SQL1,"Customer","Location") = True Then
+'		Log("Profit Field EXISTS!")
+'	Else
+'		Log("Profit DO NOT exists.")
+'		txt="ALTER TABLE Customer ADD COLUMN Location TEXT"
+'		SQL1.ExecNonQuery(txt)
+'		SQL1.ExecNonQuery ("UPDATE Customer SET Location = 'Other'")
+'	End If
+	
+	
+	
+End Sub
