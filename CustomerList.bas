@@ -123,8 +123,9 @@ Sub RefreshGrid
 		cursor1.Position = i
 		dtID = cursor1.getString("ID")
 		strLine1 = cursor1.getString("CustomerName") & "(" & cursor1.getString("CustomerLevel") & ")"
-		strLine2 = cursor1.getString("Address1") & " " & cursor1.getString("Address2") & " " & cursor1.getString("Address3") & " " & cursor1.getString("Address4")
-		clv1.Add(CreateListItem(dtID, strLine1,strLine2,clv1.AsView.Width, 70dip),  dtID)
+		'strLine2 = cursor1.getString("Address1") & " " & cursor1.getString("Address2") & " " & cursor1.getString("Address3") & " " & cursor1.getString("Address4")
+		strLine2 = cursor1.getString("Location")
+		clv1.Add(CreateListItem(dtID, strLine1,strLine2,clv1.AsView.Width, 60dip),  dtID)
 	Next
 	
 	 

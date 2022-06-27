@@ -12,7 +12,8 @@ Version=9.9
 Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
-
+	Public rp As RuntimePermissions
+	Public Provider As FileProvider
 End Sub
 
 Sub Service_Create
